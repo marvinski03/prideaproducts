@@ -1,0 +1,1742 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,700');
+
+/* TOP NAVIGATION */
+
+header.top-bar {
+    background: #f3f3f3;
+    border-top: 4px solid #a41916;
+}
+
+#controlsList li a {
+    color: #555;
+}
+
+#controlsList > li a:not(.btn):hover {
+    background: none;
+    color: #a41916;
+}
+
+
+#controlsList .anicon[aria-expanded="false"] > .anicon-search-item:before{
+    background: #4d4f4d !important;
+}
+
+.cmp-search-box {
+    background-color: #f3f3f3;
+    top: 39px;
+}
+
+#controlsList .anicon > .anicon-search-item:after{
+    background: #e1e1e1 !important;
+    border-color: #4d4f4d !important;
+}
+
+.top-bar .controls-list .control-basket .toggle-basket-preview {
+    background: none;
+}
+
+.top-bar{
+  position: relative !important;
+}
+
+body.scroll-stick .top-bar{
+    position: fixed !important;
+    left: 0px;
+    top: -147px;
+}
+
+body.scroll-stick .wrapper-main #page-body {
+  margin-top: 206px;
+}
+
+.usps,
+#usps{
+    list-style: none;
+    padding: 5px 0px !important;
+    margin: 0px !important;
+}
+
+.top-bar .controls-list * {
+    font-size: 14px;
+}
+
+.usps li{
+    display:inline-block;
+    width: calc(25% - 3px);
+}
+
+.usps li:nth-of-type(1){
+    text-align: left;
+}
+.usps li:nth-of-type(2){
+    text-align: center;
+}
+.usps li:nth-of-type(3){
+    text-align: center;
+}
+.usps li:nth-of-type(4){
+    text-align: right;
+}
+.usps li:nth-of-type(5){
+      display:none;
+  }
+
+.usps li i,
+#usps li i{
+    font-size: 18px;
+    position: relative;
+    margin-right:2px;
+}
+
+.usps *{
+    color: #525252;
+}
+
+#usps{
+  float: left;
+}
+
+#usps li{
+    display:inline-block;
+    margin-right: 30px;
+}
+
+#usps *{
+    color: #525252;
+    font-size: 14px;
+}
+
+@media(max-width: 880px){
+  #usps{
+    display: none;
+  }
+}
+
+.top-bar .controls-list .control-user #login-change > .dropdown .dropdown-menu a {
+    background: white;
+    color: #555 !important;
+}
+
+.account-menu.dropdown-menu {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.top-bar .controls-list .control-user #login-change > .dropdown.open > .dropdown-toggle {
+    background: #ececec;
+}
+
+.top-bar .controls-list .control-user #login-change > .dropdown .dropdown-menu a:hover{
+  color: white !important;
+}
+
+.top-bar .controls-list .control-user #login-change > .dropdown .dropdown-menu a:first-of-type {
+    border-top: none;
+}
+
+@media(max-width: 890px){
+
+  .usps li{
+      width: calc(33.33% - 3px);
+  }
+
+  .usps li:nth-of-type(1){
+      display:none;
+  }
+
+  .usps li:nth-of-type(2){
+      text-align: left;
+  }
+}
+
+@media(max-width: 690px){
+
+  .usps li{
+      width: calc(50% - 3px);
+  }
+
+  .usps li:nth-of-type(3){
+      display:none;
+  }
+}
+
+/* HEADER */
+
+.wrapper-main #page-body {
+    margin-top: 28px;
+}
+
+.wrapper-main .navbar {
+    background: white !important;
+     border-bottom: 1px solid #cecece !important;
+}
+
+li.ddown ul{
+    margin-top: 56px !important;
+}
+
+.navbar-brand img {
+    height: 70px !important;
+    max-height: 70px !important;
+    position: relative;
+    top: 8px;
+}
+
+div#mainNavbarCollapsable ul li > a{
+  padding-left:0px !important;
+}
+
+nav.navbar {
+    height: 150px;
+}
+
+ul.mainmenu.pull-lg-right {
+    margin-top: 8px !important;
+}
+
+@media(min-width: 992px){
+  .brand-wrapper {
+      position: relative !important;
+      top: 56px;
+      width: 100% !important;
+  }
+}
+
+
+header .pull-lg-right, header .pull-lg-left {
+    display: block !important;
+    float: none !important;
+}
+
+div#mainNavbarCollapsable > ul > li > a {
+    color: #555 !important;
+}
+
+div#mainNavbarCollapsable ul li:hover {
+    background: none !important;
+}
+
+#mainNavbarCollapsable ul.mainmenu > li > ul {
+    background: white !important;
+}
+
+#mainNavbarCollapsable ul.mainmenu > li > ul * {
+    font-weight: normal !important;
+    color: #555 !important;
+}
+
+#mainNavbarCollapsable ul.mainmenu > li > ul li:hover a {
+    color: #008EBD !important;
+}
+
+#mainNavbarCollapsable ul.mainmenu > li > ul > li:hover {
+    background: white !important;
+}
+
+.pridea-slider .carousel-item{
+  height: 380px;
+}
+
+.pridea-slider .carousel-control{
+  width: 50px;
+}
+
+.slider-txt {
+    display: inline-block;
+    font-size: 46px;
+    font-family: 'PT Sans Narrow', serif;
+    color: white;
+    position: absolute;
+    max-width: 460px;
+    padding: 10px 0px;
+    line-height: 110%;
+}
+
+.slider-txt small{
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  display:inline-block;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.slider-txt.black{
+  color: black;
+}
+
+.slider-txt.black small{
+  color: black;
+}
+
+.slide-button {
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    color: black;
+    background: white;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 100%;
+    padding: 15px 31px 13px 31px;
+    margin-top: 13px !important;
+}
+
+.slide-button:hover{
+  background:black;
+  color: white;
+}
+
+
+.slider-txt.black .slide-button{
+  background: black;
+  color: white;
+}
+
+.slider-txt.black .slide-button:hover{
+  background: white;
+  color: black;
+}
+
+.page-content,
+#vue-app,
+.footer{
+  background: white !important;
+}
+
+
+#start-slider{
+  padding: 0px 15px;
+}
+
+.carousel-control.left{
+  left:15px;
+}
+
+.carousel-control.right{
+  right:15px;
+}
+
+.slider-txt.top {top: 30px;}
+.slider-txt.bottom {bottom: 20px;}
+.slider-txt.right {right:70px;}
+.slider-txt.left {left: 70px;}
+
+/*
+#border-top {
+    width: 100%;
+    height: 8px;
+    background: black;
+    position: fixed;
+    z-index: 999999;
+    top: 0px;
+    left: 0px;
+}
+
+#border-left {
+    width: 8px;
+    height: 100%;
+    background: black;
+    position: fixed;
+    z-index: 999999;
+    top: 0px;
+    left: 0px;
+}
+
+#border-right {
+    width: 8px;
+    height: 100%;
+    background: black;
+    position: fixed;
+    z-index: 999999;
+    top: 0px;
+    right: 0px;
+}
+
+#border-bottom{
+    width: 100%;
+    height: 8px;
+    background: black;
+    position: fixed;
+    z-index: 999999;
+    bottom: 0px;
+    left: 0px;
+}
+*/
+
+.pluginset-preview-overlay {
+    display: none !important;
+}
+
+.ratgeber-text {
+    margin: 20px 0px;
+}
+
+.ratgeber-text *{
+    color: black;
+    line-height: 150%;
+}
+
+.ratgeber-text h1,
+.ratgeber-text h2,
+.ratgeber-text h3{
+
+}
+
+div#pridea-vorteile {
+    padding: 20px 0px;
+}
+
+.vorteil-item {
+    background: white;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.vorteil-item img {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+p.vorteil-subtitle {
+    max-width: 160px;
+    margin: 0 auto;
+}
+
+nav.navbar {
+      height: 102px;
+  }
+
+@media (min-width: 992px){
+  #mainNavbarCollapsable ul.mainmenu > li > a {
+      padding: 10px 30px;
+    text-transform: uppercase;
+  }
+
+  nav.navbar {
+      height: 157px;
+  }
+
+  #mainNavbarCollapsable ul.mainmenu{
+    margin-top: 32px !important;
+        justify-content: left !important;
+          height: 42px;
+  }
+
+  nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse {
+    background: #ffffff !important;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.32);
+  }
+
+  nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li a{
+    background: transparent !important;
+  }
+
+  nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li a:hover,
+  .no-touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li:hover, 
+  .touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li > ul.collapse > li.hover{
+    background: transparent !important;
+  }
+
+  .no-touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li:hover > ul.collapse, .touch nav.navbar.megamenu #mainNavbarCollapsable ul.mainmenu > li.hover > ul.collapse{
+    margin-top: 0px !important;
+  }
+
+  #mainNavbarCollapsable ul.mainmenu > li.ddown > a:after {
+      content: "\e93a";
+      font-family: 'pridea' !important;
+      font-size: 12px !important;
+      position: relative;
+      top: 1px;
+      left: 2px;
+  }
+}
+
+.footer .footer-features{
+    background-color: #f3f3f3 !important;
+    color: #525252 !important;
+}
+
+.special-tags {
+    display: none;
+}
+
+.category-grid {
+    width: calc(25% - 30px);
+    margin-bottom: 30px;
+    margin-right: 30px;
+    float: left;
+    position: relative;
+    background-size: 100% 100%;
+    background-position: center;
+    -webkit-transition: all .5s; /* Safari */
+    transition: all .5s;
+}
+
+.category-grid.xl{
+  width: calc(50% - 30px);
+}
+
+
+.category-grid:hover{
+  background-size: 120% 120%;
+}
+
+.category-grid:hover span{
+  background: white;
+}
+
+.category-grid:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.clear{
+  clear:both;
+}
+
+.category-grid span {
+    display: inline-block;
+    padding: 7px 5px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+    font-size: 17px;
+    color: black;
+    font-family: 'PT Sans Narrow', serif;
+}
+
+@media(max-width: 768px){
+  .category-grid{
+    width: calc(50% - 30px) !important;
+  }
+}
+
+@media(max-width: 600px){
+  .category-grid{
+    width: calc(50% - 10px) !important;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.google-maps{
+  margin-top: 45px;
+}
+
+header .container-max .row {
+    margin: 0px;
+}
+
+header .pull-lg-left.navbar-brand{
+  float: left !important;
+ }
+ 
+ #header-info{
+  float: right;
+  margin-top: 37px;
+  text-align:left;
+ }
+
+ @media(max-width: 992px){
+  #header-info{
+    display: none;
+  }
+ }
+ 
+ #badgets{
+  display: inline-block;
+ }
+ 
+ #badgets a,
+ #badgets a:hover,
+ #badgets a:focus,
+ #badgets a:active{
+  text-decoration: none;
+ }
+ 
+ #badgets img:first-child {
+    margin-right: 20px;
+}
+ 
+.header-info-versand,
+.header-info-hotline{
+display: block;
+position:relative;
+float:right;
+}
+
+.header-info-hotline{
+margin-right: 80px;
+}
+
+.header-info-big,
+.header-info-small{
+display:block;
+}
+
+.header-info-big{
+font-size: 17px;
+color: #4e4849;
+font-weight: bold;
+height:17px;
+}
+
+.header-info-small{
+font-size:12px;
+color: #9e9e9e;
+height:12px;
+margin-top: 3px;
+}
+
+.header-info-versand .glyphicon,
+.header-info-hotline .glyphicon{
+  position: absolute;
+  top: 9px;
+  left: -38px;
+  font-size: 23px;
+  color: #000000;
+}
+
+span.text-bg {
+    color: #333;
+}
+
+.mobileonly{
+  display:none !important;
+}
+
+.header-info-icon {
+    position: absolute;
+    top: 9px;
+    left: -40px;
+    font-size: 23px;
+    color: #008ebd;
+}
+
+.header-info-icon.pridea-truck {
+    font-size: 30px;
+    left: -43px;
+    top: 1px;
+}
+
+.navbar-toggler{
+  color: white;
+}
+
+button#btnMainMenuToggler:before {
+    content: "\e92b";
+    display: block;
+    color: black;
+    font-family: "pridea";
+    font-size: 34px;
+    position: relative;
+    top: 20px;
+}
+
+.mobile-navigation{
+  background: white;
+}
+
+.mobile-navigation * {
+    color: #282d2f;
+}
+
+.mobile-navigation i.fa.fa-home:before {
+    content: "\e602" !important;
+    font-family: "pridea" !important;
+    font-size: 22px;
+    position: relative;
+    top: -3px;
+    color: white;
+    font-size: 20px;
+        margin-right: 7px;
+}
+
+.mobile-navigation ul.breadcrumb li.btn-close:before {
+    content: "\e92a" !important;
+    font-family: "pridea";
+    position: relative;
+    top: 7px;
+    color: white;
+}
+
+.mobile-navigation ul.breadcrumb * {
+    color: white;
+}
+
+.mobile-navigation .fa-caret-right:before {
+    content: "\e965";
+    font-family: "pridea";
+}
+
+.mobile-navigation .fa-level-up:before {
+    content: "\e8fe";
+    font-family: "pridea";
+}
+
+.mobile-navigation li.ddown:nth-of-type(odd) {
+    background: #f7f7f7;
+}
+
+.mobile-navigation li.breadcrumb-item {
+    padding-top: 17px !important;
+    padding-bottom: 0px !important;
+}
+
+.mobile-navigation li.breadcrumb-item:first-of-type {
+    padding-top: 17px !important;
+    padding-bottom: 0px !important;
+}
+
+
+@media(max-width: 490px){
+
+    .usps li{
+      display: none;
+  }
+
+  .navbar-brand img {
+      height: 50px !important;
+      top: 10px;
+  }
+
+    nav.navbar {
+      height: 86px;
+  }
+}
+
+h1.h2.p-t-2.category-title {
+    margin-bottom: 10px;
+}
+
+.yt-wrapper {
+    width: 100%;
+    max-width: 460px;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tab-content h1, .tab-content h2, .tab-content h3, .tab-content h4, .tab-content h5, .tab-content h6 {
+    color: #198ec1;
+}
+
+.wrapper-main > nav.container-max ul.breadcrumb {
+    padding: 8px 15px !important;
+    font-size: 12px;
+}
+
+.breadcrumb-item a {
+    color: #534849;
+}
+
+/** ENERGIELABEL **/
+
+.rela{
+  position:relative;
+}
+
+#energielabel{
+  width: 72px;
+  height: 30px;
+  background: url("https://cdn02.plentymarkets.com/aq2poojte4zu/frontend/elabels/energieeffizienzklassen.png");
+  position:absolute;
+  top: 10px;
+  right: 0px;
+  z-index:9;
+}
+
+#energielabel.label-halfsize {
+    width: 52px;
+    height: 23px;
+    background-size: 104px 92px;
+    top: inherit;
+    right: -1px;
+    bottom: 10px;
+}
+
+#energielabel.label-halfsize.label-list{
+  top: 20px;
+    right: 20px;
+}
+
+#energielabel.elabel-aaa{background-position:0px 0px;}
+#energielabel.elabel-aa{background-position:0px -30px;}
+#energielabel.elabel-a{background-position:0px -60px;}
+#energielabel.elabel-b{background-position:0px -90px;}
+#energielabel.elabel-c{background-position:72px 0px;}
+#energielabel.elabel-d{background-position:72px -30px;}
+#energielabel.elabel-e{background-position:72px -60px;}
+
+#energielabel.label-halfsize.elabel-aaa{background-position:0px 0px;}
+#energielabel.label-halfsize.elabel-aa{background-position:0px -23px;}
+#energielabel.label-halfsize.elabel-a{background-position:0px -46px;}
+#energielabel.label-halfsize.elabel-b{background-position:0px -89px;}
+#energielabel.label-halfsize.elabel-c{background-position:54px 0px;}
+#energielabel.label-halfsize.elabel-d{background-position:54px -23px;}
+#energielabel.label-halfsize.elabel-e{background-position:54px -89px;}
+
+/** FONT **/
+
+*{
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
+  letter-spacing: 0.025em;
+  font-size: 21px;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h1.h2.title, h1.h2.title span {
+    font-size: 34px;
+}
+
+h2,h3,h4,h5,h6{
+  margin-top: 40px;
+}
+
+.span-title {
+    letter-spacing: 0.025em;
+    font-size: 39px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 26px;
+    font-family: 'PT Sans Narrow', serif;
+    color: black;
+    display: block;
+    position: relative;
+}
+
+.span-title:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 50%;
+    background: black;
+    margin: 0 auto;
+    max-width: 60px;
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+@font-face {
+  font-family: 'pridea';
+  src:  url('../documents/fonts/pridea.eot?evwypc');
+  src:  url('../documents/fonts/pridea.eot?evwypc#iefix') format('embedded-opentype'),
+    url('../documents/fonts/pridea.ttf?evwypc') format('truetype'),
+    url('../documents/fonts/pridea.woff?evwypc') format('woff'),
+    url('../documents/fonts/pridea.svg?evwypc#pridea') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="pridea-"], [class*=" pridea-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pridea' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.pridea-home:before {
+  content: "\e600";
+}
+.pridea-home2:before {
+  content: "\e601";
+}
+.pridea-home3:before {
+  content: "\e602";
+}
+.pridea-home4:before {
+  content: "\e603";
+}
+.pridea-bathtub:before {
+  content: "\e606";
+}
+.pridea-couch:before {
+  content: "\e609";
+}
+.pridea-chair:before {
+  content: "\e60a";
+}
+.pridea-pencil:before {
+  content: "\e60d";
+}
+.pridea-pen:before {
+  content: "\e60f";
+}
+.pridea-pencil3:before {
+  content: "\e610";
+}
+.pridea-eraser:before {
+  content: "\e611";
+}
+.pridea-palette:before {
+  content: "\e626";
+}
+.pridea-bucket:before {
+  content: "\e628";
+}
+.pridea-bottle:before {
+  content: "\e632";
+}
+.pridea-drop:before {
+  content: "\e633";
+}
+.pridea-drop-crossed:before {
+  content: "\e634";
+}
+.pridea-drop2:before {
+  content: "\e635";
+}
+.pridea-snow2:before {
+  content: "\e637";
+}
+.pridea-fire:before {
+  content: "\e638";
+}
+.pridea-umbrella:before {
+  content: "\e63f";
+}
+.pridea-rain:before {
+  content: "\e641";
+}
+.pridea-sun:before {
+  content: "\e647";
+}
+.pridea-cloud-rain:before {
+  content: "\e64d";
+}
+.pridea-shield:before {
+  content: "\e667";
+}
+.pridea-shield-check:before {
+  content: "\e668";
+}
+.pridea-shield-alert:before {
+  content: "\e669";
+}
+.pridea-shield-cross:before {
+  content: "\e66a";
+}
+.pridea-lock:before {
+  content: "\e66b";
+}
+.pridea-toggle-off:before {
+  content: "\e670";
+}
+.pridea-toggle-on:before {
+  content: "\e671";
+}
+.pridea-cog:before {
+  content: "\e672";
+}
+.pridea-cog2:before {
+  content: "\e673";
+}
+.pridea-wrench:before {
+  content: "\e674";
+}
+.pridea-trash2:before {
+  content: "\e681";
+}
+.pridea-trash3:before {
+  content: "\e682";
+}
+.pridea-broom:before {
+  content: "\e683";
+}
+.pridea-hearts:before {
+  content: "\e68b";
+}
+.pridea-heart:before {
+  content: "\e68c";
+}
+.pridea-star:before {
+  content: "\e68d";
+}
+.pridea-star-half:before {
+  content: "\e68e";
+}
+.pridea-star-empty:before {
+  content: "\e68f";
+}
+.pridea-flag:before {
+  content: "\e690";
+}
+.pridea-flag2:before {
+  content: "\e691";
+}
+.pridea-flag3:before {
+  content: "\e692";
+}
+.pridea-mailbox-full:before {
+  content: "\e693";
+}
+.pridea-mailbox-empty:before {
+  content: "\e694";
+}
+.pridea-at-sign:before {
+  content: "\e695";
+}
+.pridea-envelope:before {
+  content: "\e696";
+}
+.pridea-envelope-open:before {
+  content: "\e697";
+}
+.pridea-paperclip:before {
+  content: "\e698";
+}
+.pridea-eye:before {
+  content: "\e6a5";
+}
+.pridea-eye-crossed:before {
+  content: "\e6a6";
+}
+.pridea-binoculars:before {
+  content: "\e6a9";
+}
+.pridea-binoculars2:before {
+  content: "\e6aa";
+}
+.pridea-floppy-disk:before {
+  content: "\e6ae";
+}
+.pridea-printer:before {
+  content: "\e6b1";
+}
+.pridea-clipboard-empty:before {
+  content: "\e6c9";
+}
+.pridea-clipboard-pencil:before {
+  content: "\e6ca";
+}
+.pridea-clipboard-text:before {
+  content: "\e6cb";
+}
+.pridea-clipboard-check:before {
+  content: "\e6cc";
+}
+.pridea-enter:before {
+  content: "\e6d2";
+}
+.pridea-exit:before {
+  content: "\e6d3";
+}
+.pridea-typewriter:before {
+  content: "\e6d7";
+}
+.pridea-document:before {
+  content: "\e6d8";
+}
+.pridea-graduation-hat:before {
+  content: "\e6da";
+}
+.pridea-medal-empty:before {
+  content: "\e6dd";
+}
+.pridea-medal-first:before {
+  content: "\e6de";
+}
+.pridea-medal-second:before {
+  content: "\e6df";
+}
+.pridea-medal-third:before {
+  content: "\e6e0";
+}
+.pridea-trophy:before {
+  content: "\e6e2";
+}
+.pridea-trophy2:before {
+  content: "\e6e3";
+}
+.pridea-music-note2:before {
+  content: "\e6e5";
+}
+.pridea-music-note3:before {
+  content: "\e6e6";
+}
+.pridea-headphones:before {
+  content: "\e6ef";
+}
+.pridea-headset:before {
+  content: "\e6f0";
+}
+.pridea-loudspeaker:before {
+  content: "\e6f1";
+}
+.pridea-equalizer:before {
+  content: "\e6f2";
+}
+.pridea-theater:before {
+  content: "\e6f3";
+}
+.pridea-ticket:before {
+  content: "\e6f5";
+}
+.pridea-play:before {
+  content: "\e6f7";
+}
+.pridea-film-play:before {
+  content: "\e6f8";
+}
+.pridea-clapboard-play:before {
+  content: "\e6f9";
+}
+.pridea-film:before {
+  content: "\e6fb";
+}
+.pridea-surveillance:before {
+  content: "\e6fd";
+}
+.pridea-camera:before {
+  content: "\e6ff";
+}
+.pridea-camera2:before {
+  content: "\e704";
+}
+.pridea-picture:before {
+  content: "\e70e";
+}
+.pridea-picture2:before {
+  content: "\e70f";
+}
+.pridea-book:before {
+  content: "\e712";
+}
+.pridea-bookmark:before {
+  content: "\e715";
+}
+.pridea-bookmark2:before {
+  content: "\e716";
+}
+.pridea-label:before {
+  content: "\e717";
+}
+.pridea-library:before {
+  content: "\e718";
+}
+.pridea-user:before {
+  content: "\e71e";
+}
+
+i.fa.fa-user:before {
+    content: "\e71e";
+    font-family: "pridea" !important;
+}
+
+.pridea-user-plus:before {
+  content: "\e71f";
+}
+
+i.fa.fa-user-plus:before {
+  content: "\e71f";
+    font-family: "pridea" !important;
+}
+
+.pridea-user-minus:before {
+  content: "\e720";
+}
+.pridea-user-lock:before {
+  content: "\e721";
+}
+.pridea-users:before {
+  content: "\e722";
+}
+.pridea-users2:before {
+  content: "\e723";
+}
+.pridea-woman:before {
+  content: "\e727";
+}
+.pridea-man:before {
+  content: "\e728";
+}
+.pridea-baby:before {
+  content: "\e729";
+}
+.pridea-baby2:before {
+  content: "\e72a";
+}
+.pridea-baby-bottle:before {
+  content: "\e72c";
+}
+.pridea-woman2:before {
+  content: "\e731";
+}
+.pridea-man2:before {
+  content: "\e732";
+}
+.pridea-man-woman:before {
+  content: "\e733";
+}
+.pridea-height:before {
+  content: "\e734";
+}
+.pridea-weight:before {
+  content: "\e735";
+}
+.pridea-flip-flops:before {
+  content: "\e740";
+}
+.pridea-shirt:before {
+  content: "\e741";
+}
+.pridea-hanger:before {
+  content: "\e742";
+}
+.pridea-store:before {
+  content: "\e744";
+}
+.pridea-bag:before {
+  content: "\e74b";
+}
+.pridea-bag2:before {
+  content: "\e74c";
+}
+.pridea-cart:before {
+  content: "\e74d";
+}
+.pridea-cart-empty:before {
+  content: "\e74e";
+}
+.pridea-cart-full:before {
+  content: "\e74f";
+}
+.pridea-cart-plus:before {
+  content: "\e750";
+}
+.pridea-cart-plus2:before {
+  content: "\e751";
+}
+.pridea-cart-add:before {
+  content: "\e752";
+}
+.pridea-cart-remove:before {
+  content: "\e753";
+}
+.pridea-cart-exchange:before {
+  content: "\e754";
+}
+.pridea-tag:before {
+  content: "\e755";
+}
+.pridea-tags:before {
+  content: "\e756";
+}
+.pridea-receipt:before {
+  content: "\e757";
+}
+.pridea-credit-card:before {
+  content: "\e759";
+}
+.pridea-cash-euro:before {
+  content: "\e75b";
+}
+.pridea-bag-euro:before {
+  content: "\e75f";
+}
+.pridea-coin-euro:before {
+  content: "\e763";
+}
+.pridea-telephone:before {
+  content: "\e76a";
+}
+.pridea-phone-wave:before {
+  content: "\e76c";
+}
+.pridea-telephone2:before {
+  content: "\e777";
+}
+.pridea-pushpin:before {
+  content: "\e778";
+}
+.pridea-pushpin2:before {
+  content: "\e779";
+}
+.pridea-map-marker:before {
+  content: "\e77a";
+}
+.pridea-compass2:before {
+  content: "\e780";
+}
+.pridea-map2:before {
+  content: "\e782";
+}
+.pridea-location:before {
+  content: "\e783";
+}
+.pridea-desktop:before {
+  content: "\e7af";
+}
+.pridea-power-switch:before {
+  content: "\e7b8";
+}
+.pridea-power:before {
+  content: "\e7b9";
+}
+.pridea-lamp:before {
+  content: "\e7bc";
+}
+.pridea-lampshade:before {
+  content: "\e7be";
+}
+.pridea-bubble:before {
+  content: "\e7d6";
+}
+.pridea-bubbles:before {
+  content: "\e7d7";
+}
+.pridea-bubble-dots:before {
+  content: "\e7d8";
+}
+.pridea-bubble-alert:before {
+  content: "\e7d9";
+}
+.pridea-bubble-question:before {
+  content: "\e7da";
+}
+.pridea-bubble-text:before {
+  content: "\e7db";
+}
+.pridea-bubble-picture:before {
+  content: "\e7dd";
+}
+.pridea-bubble-video:before {
+  content: "\e7de";
+}
+.pridea-bubble-user:before {
+  content: "\e7df";
+}
+.pridea-bubble-quote:before {
+  content: "\e7e0";
+}
+.pridea-bubble-heart:before {
+  content: "\e7e1";
+}
+.pridea-bubble-emoticon:before {
+  content: "\e7e2";
+}
+.pridea-bubble-attachment:before {
+  content: "\e7e3";
+}
+.pridea-lifebuoy:before {
+  content: "\e7ed";
+}
+.pridea-thermometer:before {
+  content: "\e7f0";
+}
+.pridea-microscope:before {
+  content: "\e7f1";
+}
+.pridea-brain:before {
+  content: "\e7f2";
+}
+.pridea-beaker:before {
+  content: "\e7f3";
+}
+.pridea-skull:before {
+  content: "\e7f4";
+}
+.pridea-bone:before {
+  content: "\e7f5";
+}
+.pridea-construction-cone:before {
+  content: "\e7f7";
+}
+.pridea-cake:before {
+  content: "\e7fe";
+}
+.pridea-gift:before {
+  content: "\e7ff";
+}
+.pridea-lotus:before {
+  content: "\e805";
+}
+.pridea-diamond2:before {
+  content: "\e807";
+}
+.pridea-diamond3:before {
+  content: "\e808";
+}
+.pridea-teacup:before {
+  content: "\e80b";
+}
+.pridea-teapot:before {
+  content: "\e80c";
+}
+.pridea-glass:before {
+  content: "\e80d";
+}
+.pridea-bottle2:before {
+  content: "\e80e";
+}
+.pridea-glass-cocktail:before {
+  content: "\e80f";
+}
+.pridea-speed-fast:before {
+  content: "\e836";
+}
+.pridea-rocket:before {
+  content: "\e837";
+}
+.pridea-briefcase:before {
+  content: "\e83a";
+}
+.pridea-truck:before {
+  content: "\e857";
+}
+.pridea-earth:before {
+  content: "\e884";
+}
+.pridea-network:before {
+  content: "\e886";
+}
+.pridea-halloween:before {
+  content: "\e8a4";
+}
+.pridea-christmas:before {
+  content: "\e8a5";
+}
+.pridea-easter-egg:before {
+  content: "\e8a6";
+}
+.pridea-mustache2:before {
+  content: "\e8a7";
+}
+.pridea-mustache-glasses:before {
+  content: "\e8a8";
+}
+.pridea-mic:before {
+  content: "\e8cb";
+}
+.pridea-mic-mute:before {
+  content: "\e8cc";
+}
+.pridea-refresh:before {
+  content: "\e8d3";
+}
+.pridea-refresh2:before {
+  content: "\e8d4";
+}
+.pridea-undo:before {
+  content: "\e8d5";
+}
+.pridea-redo:before {
+  content: "\e8d6";
+}
+.pridea-jump2:before {
+  content: "\e8d7";
+}
+.pridea-undo2:before {
+  content: "\e8d8";
+}
+.pridea-redo2:before {
+  content: "\e8d9";
+}
+.pridea-sync:before {
+  content: "\e8da";
+}
+.pridea-repeat-one2:before {
+  content: "\e8db";
+}
+.pridea-sync-crossed:before {
+  content: "\e8dc";
+}
+.pridea-sync2:before {
+  content: "\e8dd";
+}
+.pridea-repeat-one3:before {
+  content: "\e8de";
+}
+.pridea-sync-crossed2:before {
+  content: "\e8df";
+}
+.pridea-clock2:before {
+  content: "\e8e7";
+}
+.pridea-download2:before {
+  content: "\e8f5";
+}
+.pridea-upload2:before {
+  content: "\e8f6";
+}
+.pridea-enter-up:before {
+  content: "\e8f7";
+}
+.pridea-enter-down:before {
+  content: "\e8f8";
+}
+.pridea-enter-left:before {
+  content: "\e8f9";
+}
+.pridea-enter-right:before {
+  content: "\e8fa";
+}
+.pridea-exit-up:before {
+  content: "\e8fb";
+}
+.pridea-exit-down:before {
+  content: "\e8fc";
+}
+.pridea-exit-left:before {
+  content: "\e8fd";
+}
+.pridea-exit-right:before {
+  content: "\e8fe";
+}
+.pridea-code:before {
+  content: "\e90b";
+}
+.pridea-file-code:before {
+  content: "\e90c";
+}
+.pridea-file-image:before {
+  content: "\e90d";
+}
+.pridea-file-zip:before {
+  content: "\e90e";
+}
+.pridea-file-audio:before {
+  content: "\e90f";
+}
+.pridea-file-video:before {
+  content: "\e910";
+}
+.pridea-file-preview:before {
+  content: "\e911";
+}
+.pridea-file-charts:before {
+  content: "\e912";
+}
+.pridea-file-stats:before {
+  content: "\e913";
+}
+.pridea-file-spreadsheet:before {
+  content: "\e914";
+}
+.pridea-link:before {
+  content: "\e915";
+}
+.pridea-unlink:before {
+  content: "\e916";
+}
+.pridea-link2:before {
+  content: "\e917";
+}
+.pridea-unlink2:before {
+  content: "\e918";
+}
+.pridea-thumbs-up:before {
+  content: "\e919";
+}
+.pridea-thumbs-down:before {
+  content: "\e91a";
+}
+.pridea-share2:before {
+  content: "\e920";
+}
+.pridea-magnifier:before {
+  content: "\e922";
+}
+.pridea-file-search:before {
+  content: "\e923";
+}
+.pridea-zoom-in:before {
+  content: "\e925";
+}
+.pridea-zoom-out:before {
+  content: "\e926";
+}
+.pridea-loupe:before {
+  content: "\e927";
+}
+.pridea-loupe-zoom-in:before {
+  content: "\e928";
+}
+.pridea-loupe-zoom-out:before {
+  content: "\e929";
+}
+.pridea-cross:before {
+  content: "\e92a";
+}
+.pridea-menu:before {
+  content: "\e92b";
+}
+.pridea-list:before {
+  content: "\e92c";
+}
+.pridea-list2:before {
+  content: "\e92d";
+}
+.pridea-list3:before {
+  content: "\e92e";
+}
+.pridea-menu2:before {
+  content: "\e92f";
+}
+.pridea-list4:before {
+  content: "\e930";
+}
+.pridea-check:before {
+  content: "\e934";
+}
+.pridea-cross2:before {
+  content: "\e935";
+}
+.pridea-chevron-up:before {
+  content: "\e939";
+}
+.pridea-chevron-down:before {
+  content: "\e93a";
+}
+.pridea-chevron-left:before {
+  content: "\e93b";
+}
+.pridea-chevron-right:before {
+  content: "\e93c";
+}
+.pridea-chevrons-expand-vertical:before {
+  content: "\e93d";
+}
+.pridea-chevrons-expand-horizontal:before {
+  content: "\e93e";
+}
+.pridea-chevrons-contract-vertical:before {
+  content: "\e93f";
+}
+.pridea-chevrons-contract-horizontal:before {
+  content: "\e940";
+}
+.pridea-arrow-up:before {
+  content: "\e941";
+}
+.pridea-arrow-down:before {
+  content: "\e942";
+}
+.pridea-arrow-left:before {
+  content: "\e943";
+}
+.pridea-arrow-right:before {
+  content: "\e944";
+}
+.pridea-arrow-up-right:before {
+  content: "\e945";
+}
+.pridea-warning:before {
+  content: "\e955";
+}
+.pridea-notification-circle:before {
+  content: "\e956";
+}
+.pridea-question-circle:before {
+  content: "\e957";
+}
+.pridea-checkmark-circle:before {
+  content: "\e959";
+}
+.pridea-cross-circle:before {
+  content: "\e95a";
+}
+.pridea-plus-circle:before {
+  content: "\e95b";
+}
+.pridea-circle-minus:before {
+  content: "\e95c";
+}
+.pridea-arrow-up-circle:before {
+  content: "\e95e";
+}
+.pridea-arrow-down-circle:before {
+  content: "\e95f";
+}
+.pridea-arrow-left-circle:before {
+  content: "\e960";
+}
+.pridea-arrow-right-circle:before {
+  content: "\e961";
+}
+.pridea-chevron-up-circle:before {
+  content: "\e962";
+}
+.pridea-chevron-down-circle:before {
+  content: "\e963";
+}
+.pridea-chevron-left-circle:before {
+  content: "\e964";
+}
+.pridea-chevron-right-circle:before {
+  content: "\e965";
+}
+.pridea-arrow-up-square:before {
+  content: "\e991";
+}
+.pridea-arrow-down-square:before {
+  content: "\e992";
+}
+.pridea-arrow-left-square:before {
+  content: "\e993";
+}
+.pridea-arrow-right-square:before {
+  content: "\e994";
+}
+.pridea-chevron-up-square:before {
+  content: "\e995";
+}
+.pridea-chevron-down-square:before {
+  content: "\e996";
+}
+.pridea-chevron-left-square:before {
+  content: "\e997";
+}
+.pridea-chevron-right-square:before {
+  content: "\e998";
+}
+.pridea-check-square:before {
+  content: "\e999";
+}
+.pridea-cross-square:before {
+  content: "\e99a";
+}
+.pridea-circle:before {
+  content: "\e99d";
+}
+.pridea-radio-button:before {
+  content: "\e99e";
+}
+.pridea-text-align-left:before {
+  content: "\e9a8";
+}
+.pridea-text-align-center:before {
+  content: "\e9a9";
+}
+.pridea-text-align-right:before {
+  content: "\e9aa";
+}
+.pridea-text-align-justify:before {
+  content: "\e9ab";
+}
