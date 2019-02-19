@@ -193,6 +193,11 @@ ul.mainmenu.pull-lg-right {
     margin-top: 8px !important;
 }
 
+ul.mainmenu.float-lg-right {
+    text-align: left !important;
+    justify-content: normal !important;
+}
+
 @media(min-width: 992px){
   .brand-wrapper {
       position: relative !important;
@@ -200,6 +205,10 @@ ul.mainmenu.pull-lg-right {
       width: 100% !important;
   }
 }
+
+.brand-wrapper {
+      width: 100% !important;
+  }
 
 
 header .pull-lg-right, header .pull-lg-left {
