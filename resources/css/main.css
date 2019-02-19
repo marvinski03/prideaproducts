@@ -699,6 +699,12 @@ button#btnMainMenuToggler:before {
     padding-bottom: 0px !important;
 }
 
+.list-controls .list-controls-inner {
+    background: #efefef;
+    padding: 1.5em;
+    color: black;
+}
+
 
 @media(max-width: 490px){
 
