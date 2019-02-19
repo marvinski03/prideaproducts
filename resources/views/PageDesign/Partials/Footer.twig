@@ -64,31 +64,74 @@
         
         <div class="row">
             <hr class="m-y-2">
-            {% for i in 1..numberOfCols %}
+
                 <div class="col-sm-6 col-md-4">
                     <nav class="footer-column m-b-2">
-                        <h2 class="h5">{{ trans('Ceres::Template.footerColumnTitle' ~ i) }}</h2>
+                        <h2 class="h5">Einkaufen</h2>
                         <ul class="list-unstyled">
-
-                            {% set footerCategories = config('Ceres.footer.col_' ~ i ~ '_categories') | find("[0-9]+") %}
-                            {% for catID in footerCategories %}
-
-                                {% set cat = services.category.get(catID, lang) %}
-
-                                {% if cat is not null %}
-                                    {% set displayedCategories = displayedCategories | merge([catID]) %}
-                                    <li>
-                                        <a href="{{ services.category.getURL( cat ) }}">
-                                            {{ cat.details.first.name }}</a>
-                                    </li>
-                                {% endif %}
-
-                            {% endfor %}
-
+                            <li>
+                                <a href="#">Zahlung und Versand</a>
+                            </li>
+                            <li>
+                                <a href="#">Widerrufsrecht</a>
+                                 </li>
+                            <li>
+                                <a href="#">Warenkorb</a>
+                                 </li>
+                            <li>
+                                <a href="#">Zur Kasse</a>
+                                 </li>
+                            <li>
+                                <a href="#">Hilfe</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
-            {% endfor %}
+
+                <div class="col-sm-6 col-md-4">
+                    <nav class="footer-column m-b-2">
+                        <h2 class="h5">Mein Konto</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Registrieren</a>
+                                 </li>
+                            <li>
+                                <a href="#">Login</a>
+                                 </li>
+                            <li>
+                                <a href="#">Wunschliste</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <nav class="footer-column m-b-2">
+                        <h2 class="h5">Unternehmen</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#">Kontakt</a>
+                                 </li>
+                            <li>
+                                <a href="#">Jobs & Karriere</a>
+                                 </li>
+                            <li>
+                                <a href="#">Datenschutzerklärung</a>
+                                 </li>
+                            <li>
+                                <a href="#">AGB</a>
+                                 </li>
+                            <li>
+                                <a href="#">Impressum</a>
+                                 </li>
+                            <li>
+                                <a href="#">Hinweise zur Batterieentsorgung</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
             <hr class="hidden-sm-up m-y-2">
             <div class="col-xs-6 col-sm-3">
                 <div class="footer-column">
@@ -110,22 +153,7 @@
 
         {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
         <div class="copyright text-xs-center m-y-1">
-            <div class="static-link-list">
-                {% autoescape false %}
-                    <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
-                    {% if config("Ceres.footer.cancellation_use_pdf") == "true" %}
-                        <a href="{{ config('Ceres.footer.cancellation_pdf_path') }}" target="_blank">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
-                    {% else %}
-                        <a href="{{ urls.cancellationForm }}">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
-                    {% endif %}
-                    <a href="{{ urls.legalDisclosure }}">{{ trans("Ceres::Template.footerLegalDisclosure") }}</a>
-                    <a href="{{ urls.privacyPolicy }}">{{ trans("Ceres::Template.footerPrivacyPolicy", {"hyphen": "&shy;"}) }}</a>
-                    <a href="{{ urls.gtc }}">{{ trans("Ceres::Template.footerGtc") }}</a>
-                    {% if config("Ceres.contact.shop_mail") | length > 0 and config("Ceres.contact.shop_mail") != "your@email.com" %}
-                        <a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}</a>
-                    {% endif %}
-                {% endautoescape %}
-            </div>
+
             <a rel="nofollow" href="https://www.plentymarkets.eu">
                 <img alt="Plentymarkets GmbH Logo" class="svg plenty-brand" src="{{ plugin_path('Ceres') }}/images/plentymarkets-logo.svg" rel="nofollow" crossorigin="anonymous">
             </a>
