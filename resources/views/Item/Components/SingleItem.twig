@@ -4,6 +4,7 @@
 {% set itemData = config("Ceres.item.data") | split(', ') %}
 {% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
 {% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
+
 {% set var = getFree(item.documents[0].data.item.id) %}
 
 <script type="x/template" id="vue-single-item">
@@ -26,6 +27,10 @@
 
             <slot name="ItemListContainer"></slot>
             <slot name="FeedbackContainer"></slot>
+            <slot name="Produktvideo"></slot>
+            <slot name="Energielabel"></slot>
+
+
         </div>
     </div>
 </script>
