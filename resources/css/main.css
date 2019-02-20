@@ -315,12 +315,21 @@ div#mainNavbarCollapsable ul li:hover {
   padding: 0px 15px;
 }
 
+.carousel-control {
+    position: absolute;
+    top: calc(50% - 15px);
+    color: white;
+    font-size: 45px;
+}
+
 .carousel-control.left{
-  left:15px;
+  left:25px;
+  text-align: left;
 }
 
 .carousel-control.right{
-  right:15px;
+  right:25px;
+  text-align: right;
 }
 
 .slider-txt.top {top: 30px;}
