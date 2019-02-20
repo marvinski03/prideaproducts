@@ -1,7 +1,6 @@
 {% set itemData = config("Ceres.item.data") | split(', ') %}
 {% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
 {% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
-{% set var = getFree(item.documents[0].data.item.id) %}
 
 <script type="x/template" id="vue-single-item">
     <div>
@@ -33,24 +32,7 @@
 
                     <hr>
 
-                    <div class="m-b-3 rela">
-
-                        {% if var.free1 %}
-
-                            <a href="https://cdn02.plentymarkets.com/aq2poojte4zu/frontend/elabels/{{ item.documents[0].data.variation.number }}.png" title="Energielabel {{ item.documents[0].data.variation.number }}" target="_blank" data-lightbox="energielabel">
-                                <div id="energielabel"
-                                    {% if var.free1 == 'A++'%}class="elabel-aaa"{% endif %}
-                                    {% if var.free1 == 'A+'%}class="elabel-aa"{% endif %}
-                                    {% if var.free1 == 'A'%}class="elabel-a"{% endif %}
-                                    {% if var.free1 == 'B'%}class="elabel-b"{% endif %}
-                                    {% if var.free1 == 'C'%}class="elabel-c"{% endif %}
-                                    {% if var.free1 == 'D'%}class="elabel-d"{% endif %}
-                                    {% if var.free1 == 'E'%}class="elabel-e"{% endif %}
-                                ></div>
-                            </a>
-
-                        {% endif %}
-
+                    <div class="m-b-3">
                         <span class="articlenumber small text-muted">
                             <b>{{ trans("Ceres::Template.singleItemNumber") }}</b>
                             <span>${ currentVariation.variation.number }</span>
@@ -127,7 +109,7 @@
 
                     {% if "wish-list" in enabledRoutes or "all" in enabledRoutes %}
                         <div class="row">
-                             <add-to-wish-list :variation-id="currentVariation.variation.id"></add-to-wish-list>
+                            <add-to-wish-list :variation-id="currentVariation.variation.id"></add-to-wish-list>
                         </div>
                     {% endif %}
                 <!-- ./ITEM DETAIL -->
@@ -160,14 +142,6 @@
                             </li>
                         {% endif %}
 
-                        {% if var.free2 %}
-
-	                        <li class="nav-item">
-							    <a class="nav-link" data-toggle="tab" href="#my-custom-tab" role="tab">Produktvideo</a>
-							</li>
-
-						{% endif %}
-
                         <li class="nav-item">
                             <a :class="{ 'active': !isDescriptionTabActive && !isTechnicalDataTabActive }" class="nav-link" data-toggle="tab" href="#assessments-details" role="tab">{{ trans("Ceres::Template.singleItemMoreDetails") }}</a>
                         </li>
@@ -189,19 +163,6 @@
                                 </div>
                             </div>
                         {% endif %}
-
-
-                        {% if var.free2 %}
-
-                        <div class="tab-pane" id="my-custom-tab" role="tabpanel">
-						    <div class="m-y-2">
-								<div class='embed-container yt-videos'>
-									<iframe src='https://www.youtube-nocookie.com/embed/{{ var.free2 }}?rel=0&showinfo=0' frameborder='0' allowfullscreen></iframe>
-								</div>
-						    </div>
-						</div>
-
-						{% endif %}
 
                         <div :class="{ 'active': !isDescriptionTabActive && !isTechnicalDataTabActive }" class="tab-pane" id="assessments-details" role="tabpanel">
                             <div class="m-y-2">
