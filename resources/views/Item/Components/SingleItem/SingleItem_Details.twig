@@ -15,7 +15,25 @@
 
     <hr>
 
-    <div class="mb-5">
+    <div class="mb-5 rela">
+
+    {% if var.free1 %}
+
+                            <a href="https://cdn02.plentymarkets.com/aq2poojte4zu/frontend/elabels/{{ item.documents[0].data.variation.number }}.png" title="Energielabel {{ item.documents[0].data.variation.number }}" target="_blank" data-lightbox="energielabel">
+                                <div id="energielabel"
+                                    {% if var.free1 == 'A++'%}class="elabel-aaa"{% endif %}
+                                    {% if var.free1 == 'A+'%}class="elabel-aa"{% endif %}
+                                    {% if var.free1 == 'A'%}class="elabel-a"{% endif %}
+                                    {% if var.free1 == 'B'%}class="elabel-b"{% endif %}
+                                    {% if var.free1 == 'C'%}class="elabel-c"{% endif %}
+                                    {% if var.free1 == 'D'%}class="elabel-d"{% endif %}
+                                    {% if var.free1 == 'E'%}class="elabel-e"{% endif %}
+                                ></div>
+                            </a>
+
+                        {% endif %}
+
+                        
                             <span class="articlenumber small text-muted">
                                 <b>{{ trans("Ceres::Template.singleItemNumber") }}</b>
                                 <span>${ currentVariation.variation.number }</span>
