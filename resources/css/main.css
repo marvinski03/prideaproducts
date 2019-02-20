@@ -185,6 +185,14 @@ div#mainNavbarCollapsable ul li > a{
   padding-left:0px !important;
 }
 
+#mainNavbarCollapsable ul.mainmenu li ul li ul {
+    display: contents;
+}
+
+#mainNavbarCollapsable ul.mainmenu li ul li ul .level2 {
+    display: none !important;
+}
+
 nav.navbar {
     height: 150px;
 }
