@@ -793,6 +793,10 @@ h1.h2.p-t-2.category-title {
   position:relative;
 }
 
+span.availability.badge {
+    padding: 6px 10px;
+}
+
 #energielabel{
   width: 72px;
   height: 30px;
