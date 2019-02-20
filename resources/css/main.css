@@ -320,6 +320,12 @@ div#mainNavbarCollapsable ul li:hover {
     top: calc(50% - 15px);
     color: white;
     font-size: 45px;
+    opacity: 0.5;
+}
+
+.carousel-control:hover {
+    color: white;
+    opacity: 1;
 }
 
 .carousel-control.left{
