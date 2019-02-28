@@ -354,12 +354,23 @@ div#mainNavbarCollapsable ul li:hover {
 
 @media(max-width: 500px){
   .slider-txt {
-      font-size: 36px;
+      font-size: 26px;
   }
 
-  .slider-txt.right {right:20px;}
+  .slider-txt.right {left:20px; right:inherit;}
   .slider-txt.left {left: 20px;}
+  .slider-txt.bottom {bottom: inherit; top: 30px;}
 
+  .pridea-slider .carousel-item {
+      height: 210px;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .slide-button {
+    padding: 8px 15px 5px 15px !important;
+    margin-top: 5px !important;
+}
 
 }
 
