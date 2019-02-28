@@ -56,7 +56,7 @@
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                     </span>
 
-                    <ul data-level="1" id="navDropdown{{ counter }}" class="collapse">
+                    <ul data-level="1" id="navDropdown{{ counter }} kat-{{ child.details[0].name }}" class="collapse">
                         {% set counter = counter + 1 %}
                         {% if megaMenuLevels == 1 %}
                             {% for child in category.children %}
