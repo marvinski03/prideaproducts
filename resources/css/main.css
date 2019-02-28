@@ -894,6 +894,7 @@ div#plenty-cookie-bar .container-max {
     padding: 12px 0px 45px 0px;
     border-bottom: 1px solid #cccccc;
     background: #f7f7f7;
+    margin-bottom: 20px;
 }
 
 .footer-vorteil-box img {
@@ -902,7 +903,7 @@ div#plenty-cookie-bar .container-max {
     mix-blend-mode: multiply;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 1200px) and (min-width: 768px){
   .footer-vorteil-box {
       min-height: 220px;
   }
