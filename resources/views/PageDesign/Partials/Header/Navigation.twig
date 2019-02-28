@@ -4,6 +4,7 @@
 {% set companyName  = trans("Ceres::Template.headerCompanyName") %}
 {% set useMegaMenu  = config("Ceres.header.megamenu_levels") > 1 %}
 
+
 <nav class="navbar{% if useMegaMenu %} megamenu{%endif%}">
     <div class="container-max">
         <div class="row">
@@ -39,13 +40,12 @@
 
 				<div class="clear"></div>
 
-
-                <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler hidden-lg-up" type="button">
+                <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler d-lg-none" type="button">
                     &#9776;
                 </button>
             </div>
 
-            <div id="mainNavbarCollapsable">
+           <div id="mainNavbarCollapsable">
                 <ul class="breadcrumb">
                     <li class="btnClose"></li>
                 </ul>
