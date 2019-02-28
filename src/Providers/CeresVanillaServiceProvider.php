@@ -71,10 +71,8 @@ class CeresVanillaServiceProvider extends ServiceProvider
             /* Override CategoryTree from Ceres by strickimiki */
         $dispatcher->listen('IO.Component.Import', function(ComponentContainer $container)
         {
-            if( $container->getOriginComponentTemplate() == 'Ceres::Category.Macros.CategoryTree')
-            {
-                $container->setNewComponentTemplate('CeresVanilla::Category.Macros.CategoryTree');
-            }
+            $container->setNewComponentTemplate('CeresVanilla::Category.Macros.CategoryTree');
+            
         }, self::PRIORITY);
 
         // Override homepage
