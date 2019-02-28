@@ -36,6 +36,10 @@ header.top-bar {
     border-color: #4d4f4d !important;
 }
 
+#controlsList .anicon[aria-expanded="true"] > .anicon-search-item:after{
+  background: #555 !important;
+}
+
 .top-bar .controls-list .control-basket .toggle-basket-preview {
     background: none;
 }
