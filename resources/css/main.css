@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,700');
 
+div#vue-app {
+    margin-top: 0px !important;
+    min-height: 100vh !important;
+}
+
 /* TOP NAVIGATION */
 
 header.top-bar {
-    background: #f3f3f3;
+    background: #f3f3f3 !important;
     border-top: 4px solid #a41916;
 }
 
