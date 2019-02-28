@@ -32,18 +32,23 @@
                     {% endif %}
                 </div>
             </div>
-        <div class="list-controls m-b-3">
+        <div class="list-controls mb-3">
             <div class="list-controls-inner">
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-12">
                         <div class="list-wrapper">
-                            <item-list-sorting template="#vue-item-list-sorting" :sorting-list="{{ searchOptions.sorting | json_encode }}" :default-sorting="{{ searchOptions.defaultSorting | json_encode }}"></item-list-sorting>
-                            <items-per-page
-                                template="#vue-items-per-page"
-                                :pagination-values="{{ searchOptions.itemsPerPage | json_encode }}"></items-per-page>
-                            {% set overrideSearchFilters = LayoutContainer.show("Ceres::Search.Filter", facets ) %}
+                            {% include "Ceres::Category.Item.Partials.ItemSorting" with { 'sortingData': searchOptions.sorting, 'selectedSorting': itemSorting } %}
+
+                            {% include "Ceres::Category.Item.Partials.ItemsPerPage" with { 'itemsPerPage': searchOptions.itemsPerPage, 'selectedValue': itemsPerPage } %}
+
                             {% if overrideSearchFilters | trim is empty %}
-                                <item-filter-list :facet-data="{{ facets | json_encode }}"></item-filter-list>
+                                <item-filter-list :facet-data="{{ facets | json_encode }}">
+                                    {% if facets | length > 0 %}
+                                        <a class="btn btn-link filter-toggle" href="#filterCollapse">
+                                            <i class="fa fa-sliders default-float" aria-hidden="true"></i> {{ trans("Ceres::Template.itemFilter") }}
+                                        </a>
+                                    {% endif %}
+                                </item-filter-list>
                             {% else %}
                                 {{ overrideSearchFilters }}
                             {% endif %}
