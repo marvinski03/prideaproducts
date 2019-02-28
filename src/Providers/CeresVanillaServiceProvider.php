@@ -68,14 +68,14 @@ class CeresVanillaServiceProvider extends ServiceProvider
             return false;
         }, self::PRIORITY);
 
-            /* Override CategoryTree from Ceres by strickimiki
-    $dispatcher->listen('IO.Component.Import', function(ComponentContainer $container)
-    {
-        if( $container->getOriginComponentTemplate() == 'Ceres::Category.Macros.CategoryTree')
+            /* Override CategoryTree from Ceres by strickimiki */
+        $dispatcher->listen('IO.Component.Import', function(ComponentContainer $container)
         {
-            $container->setNewComponentTemplate('strickimiki::Category.Macros.CategoryTree');
-        }
-    }, self::PRIORITY);*/
+            if( $container->getOriginComponentTemplate() == 'Ceres::Category.Macros.CategoryTree')
+            {
+                $container->setNewComponentTemplate('CeresVanilla::Category.Macros.CategoryTree');
+            }
+        }, self::PRIORITY);
 
         // Override homepage
         if (in_array("homepage", $enabledOverrides) || in_array("all", $enabledOverrides))
