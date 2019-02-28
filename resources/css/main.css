@@ -197,7 +197,7 @@ div#mainNavbarCollapsable ul li > a{
 }
 
 #mainNavbarCollapsable ul.mainmenu li ul li ul {
-    display: contents;
+    display: table;
 }
 
 #mainNavbarCollapsable ul.mainmenu li ul li ul .level2 {
