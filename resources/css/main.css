@@ -351,6 +351,18 @@ div#mainNavbarCollapsable ul li:hover {
 .slider-txt.right {right:70px;}
 .slider-txt.left {left: 70px;}
 
+
+@media(max-width: 500px){
+  .slider-txt {
+      font-size: 36px;
+  }
+
+  .slider-txt.right {right:20px;}
+  .slider-txt.left {left: 20px;}
+
+
+}
+
 /*
 #border-top {
     width: 100%;
