@@ -14,7 +14,7 @@
 {% set currencyFormat = config("Ceres.currency.format") %}
 {% set currencyFormatSelect = config("Ceres.currency.format_selection") %}
 
-<header class="top-bar">
+<header id="page-header" class="top-bar fixed-top">
     <div>
         <div class="container-max">
             <div class="row">
@@ -108,6 +108,20 @@
         {% include "CeresVanilla::PageDesign.Partials.Header.Navigation" %}
     </div>
 </header>
+
+{% set scriptId = uid() %}
+<script id="{{ scriptId }}">
+    var vueApp = document.getElementById("vue-app");
+    var pageHeader = document.getElementById("page-header");
+
+    if ( !!vueApp && !!pageHeader )
+    {
+        vueApp.style.marginTop = pageHeader.getBoundingClientRect().height + 'px';
+    }
+
+    var scriptElement = document.getElementById("{{ scriptId }}");
+    scriptElement.parentElement.removeChild(scriptElement);
+</script>
 
 
 <!-- breadcrumb -->
