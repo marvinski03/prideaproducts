@@ -767,6 +767,10 @@ button#btnMainMenuToggler:before {
   .list-controls.m-b-3 {
       margin-bottom: 10px !important;
   }
+
+   .nav-tabs a.nav-link {
+      padding: 10px !important;
+  }
 }
 
 li.ddown ul li ul {
