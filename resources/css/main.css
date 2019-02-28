@@ -355,10 +355,11 @@ div#mainNavbarCollapsable ul li:hover {
 @media(max-width: 500px){
   .slider-txt {
       font-size: 26px;
+      width: calc(100% - 70px);
   }
 
-  .slider-txt.right {left:20px; right:inherit;}
-  .slider-txt.left {left: 20px;}
+  .slider-txt.right {left:35px; right:inherit;}
+  .slider-txt.left {left: 35px;}
   .slider-txt.bottom {bottom: inherit; top: 30px;}
 
   .pridea-slider .carousel-item {
