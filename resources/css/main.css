@@ -876,10 +876,6 @@ span.availability.badge {
     max-width: 1170px;
 }
 
-div#plenty-cookie-bar {
-    transform: none;
-}
-
 div#plenty-cookie-bar,
 div#plenty-cookie-bar .container-max {
     background: #f7f7f7;
