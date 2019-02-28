@@ -334,6 +334,12 @@ div#mainNavbarCollapsable ul li:hover {
   padding: 0px 15px;
 }
 
+@media(max-width: 768px){
+  #start-slider{
+    margin-top:25px;
+  }
+}
+
 .carousel-control {
     position: absolute;
     top: calc(50% - 15px);
@@ -519,6 +525,11 @@ nav.navbar {
 .footer .footer-features{
     background-color: #f3f3f3 !important;
     color: #525252 !important;
+}
+
+.footer ul.list-unstyled a:hover {
+    color: black;
+    font-weight: bold;
 }
 
 .special-tags {
