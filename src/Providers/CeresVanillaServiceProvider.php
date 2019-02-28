@@ -9,6 +9,7 @@ use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\Templates\Twig;
 use IO\Helper\TemplateContainer;
+use IO\Helper\ComponentContainer;
 use IO\Extensions\Functions\Partial;
 use Plenty\Plugin\ConfigRepository;
 use CeresVanilla\Extensions\PrideaGetFreitext;
@@ -71,8 +72,10 @@ class CeresVanillaServiceProvider extends ServiceProvider
             /* Override CategoryTree from Ceres by strickimiki */
         $dispatcher->listen('IO.Component.Import', function(ComponentContainer $container)
         {
-            $container->setNewComponentTemplate('CeresVanilla::Category.Macros.CategoryTree');
-            
+            if( $container->getOriginComponentTemplate() == 'Ceres::Category.Macros.CategoryTree')
+            {
+                $container->setNewComponentTemplate('CeresVanilla::Category.Macros.CategoryTree');
+            }
         }, self::PRIORITY);
 
         // Override homepage
