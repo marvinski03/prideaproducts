@@ -165,6 +165,12 @@ body.scroll-stick .wrapper-main #page-body {
     margin-top: 28px;
 }
 
+@media(max-width: 768px){
+  .wrapper-main #page-body {
+    margin-top: 0px;
+}
+}
+
 .wrapper-main .navbar {
     background: white !important;
      border-bottom: 1px solid #cecece !important;
@@ -751,6 +757,16 @@ button#btnMainMenuToggler:before {
     background: #efefef;
     padding: 1.5em;
     color: black;
+}
+
+@media(max-width: 768px){
+  .list-controls .list-controls-inner {
+      padding: 5px;
+  }
+
+  .list-controls.m-b-3 {
+      margin-bottom: 10px !important;
+  }
 }
 
 li.ddown ul li ul {
