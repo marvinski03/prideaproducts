@@ -936,6 +936,13 @@ div#plenty-cookie-bar .container-max {
     top: -4px;
 }
 
+.col-lg-4.variation-select {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
 
 /** FONT **/
 
