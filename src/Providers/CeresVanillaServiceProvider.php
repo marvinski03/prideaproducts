@@ -75,7 +75,7 @@ class CeresVanillaServiceProvider extends ServiceProvider
         $dispatcher->listen('IO.Component.Import', function(ComponentContainer $container){
          if( $container->getOriginComponentTemplate() == 'Ceres::Category.Macros.CategoryTree')
          {
-            $container->setNewComponentTemplate('CeresVanilla::Category.Macros.CategoryTreet');
+            $container->setNewComponentTemplate('CeresVanilla::Category.Macros.CategoryTree');
          }
        }, 0);
 
