@@ -50,6 +50,19 @@ body.scroll-stick .top-bar{
     top: -147px;
 }
 
+.top-bar .controls-list .control-languages a[aria-expanded="true"], .top-bar .controls-list .control-search a[aria-expanded="true"] {
+    background: none;
+}
+
+.anicon.anicon-search-xcross[aria-expanded="true"]>.anicon-search-item:after{
+  background: #555 !important;
+}
+
+.anicon.anicon-search-xcross[aria-expanded="true"]>.anicon-search-item:before {
+    border-radius: 2.85714px;
+    background: #555;
+}
+
 body.scroll-stick .wrapper-main #page-body {
   margin-top: 206px;
 }
