@@ -853,6 +853,21 @@ span.availability.badge {
     max-width: 1170px;
 }
 
+div#plenty-cookie-bar {
+    transform: none;
+}
+
+div#plenty-cookie-bar,
+div#plenty-cookie-bar .container-max {
+    background: #f7f7f7;
+}
+
+.cookie-bar__btn {
+    color: #555555;
+    border-color: #555555;
+    line-height: 210%;
+}
+
 .footer-vorteil-box {
     text-align: center;
     border-top: 1px solid #cccccc;
