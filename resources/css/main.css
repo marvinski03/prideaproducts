@@ -679,6 +679,7 @@ span.text-bg {
 
 .navbar-toggler{
   color: white;
+  top: 36%;
 }
 
 button#btnMainMenuToggler:before {
@@ -773,7 +774,7 @@ li.ddown ul li ul {
 
   .navbar-brand img {
       height: 50px !important;
-      top: 10px;
+      top: 1px;
   }
 
     nav.navbar {
