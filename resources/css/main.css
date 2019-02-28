@@ -848,11 +848,30 @@ span.availability.badge {
 
 /** FOOTER **/
 
+.container.footer-vorteile {
+    margin-top: 70px;
+    max-width: 1170px;
+}
+
 .footer-vorteil-box {
     text-align: center;
     border-top: 1px solid #cccccc;
-    padding: 25px 0px 25px 0px;
+    padding: 12px 0px 45px 0px;
     border-bottom: 1px solid #cccccc;
+    background: #f7f7f7;
+}
+
+.footer-vorteil-box img {
+    height: 24px;
+    margin: 11px;
+    mix-blend-mode: multiply;
+}
+
+@media(max-width: 1200px){
+  .footer-vorteil-box {
+      min-height: 220px;
+  }
+
 }
 
 
