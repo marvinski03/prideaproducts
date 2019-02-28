@@ -845,6 +845,17 @@ span.availability.badge {
 #energielabel.label-halfsize.elabel-d{background-position:54px -23px;}
 #energielabel.label-halfsize.elabel-e{background-position:54px -89px;}
 
+
+/** FOOTER **/
+
+.footer-vorteil-box {
+    text-align: center;
+    border-top: 1px solid #cccccc;
+    padding: 25px 0px 25px 0px;
+    border-bottom: 1px solid #cccccc;
+}
+
+
 /** FONT **/
 
 *{
