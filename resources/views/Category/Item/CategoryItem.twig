@@ -10,12 +10,7 @@
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterList") }}
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterTagList") }}
 
-    {% if category is defined and ceresConfig.item.showCategoryImage %}
-        {% include "Ceres::Category.Item.Partials.CategoryParallaxImage" with { 'category': category } %}
-    {% endif %}
-
     <div class="categoriegrid page-content container-max">
-        {% if category is defined and not ceresConfig.item.showCategoryImage %}
             <div class="row mt-3">
                 <div class="col-12">
                                         <h1 class="h2 category-title try">
@@ -30,7 +25,6 @@
                     {% endif %}
                 </div>
             </div>
-        {% endif %}
 
         <div class="list-controls mb-5">
             <div class="list-controls-inner">
