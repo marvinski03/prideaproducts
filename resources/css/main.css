@@ -1046,6 +1046,10 @@ h2,h3,h4,h5,h6{
   line-height: 1;
 }
 
+div#ppButton {
+    margin-top: 10px;
+}
+
 .pridea-home:before {
   content: "\e600";
 }
