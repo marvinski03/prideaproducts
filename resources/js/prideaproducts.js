@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
 		}
 	}
 
-	jQuery("#paymentMethodContainer").click(function(){
+	jQuery(".paymentMethodRow").click(function(){
 		checkFinanzierungsanzeige();
 	});
 
