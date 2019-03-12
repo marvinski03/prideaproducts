@@ -944,10 +944,11 @@ div#plenty-cookie-bar .container-max {
 .footer-vorteil-box {
     text-align: center;
     border-top: 1px solid #cccccc;
-    padding: 12px 0px 45px 0px;
+    padding: 19px 20px 34px 20px;
     border-bottom: 1px solid #cccccc;
     background: #f7f7f7;
     margin-bottom: 20px;
+    min-height: 220px;
 }
 
 .footer-vorteil-box img {
