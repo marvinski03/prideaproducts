@@ -791,6 +791,26 @@ button#btnMainMenuToggler:before {
     color: black;
 }
 
+.paypal-installment-specific-promotion > div,
+.paypal-installment-specific-promotion > span {
+    display: none;
+}
+
+.paypal-installment-specific-promotion {
+    height: 42px;
+    overflow: hidden;
+    padding-left: 13px;
+    margin-top: 15px;
+     margin-bottom: 10px;
+}
+
+.paypal-installment-specific-promotion b {
+    font-weight: normal !important;
+    color: #7f878e !important;
+    font-size: 14px;
+    line-height: 150%;
+}
+
 @media(max-width: 768px){
   .list-controls .list-controls-inner {
       padding: 5px;
