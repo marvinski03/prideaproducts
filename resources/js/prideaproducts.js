@@ -3,16 +3,20 @@ jQuery(document).ready(function() {
 	jQuery(".checkout .paypal-installment-specific-promotion").css("display","none");
 
 	function checkFinanzierungsanzeige(){
-		if( jQuery("#PP_Installments").hasClass("selected") ){
-			jQuery(".checkout .paypal-installment-specific-promotion").css("display","block");
-			alert("leider nein");
-		}else{
-			jQuery(".checkout .paypal-installment-specific-promotion").css("display","none");
-			alert("leider ja");
-		}
+		setTimeout(function(){
+			if( jQuery("#checkoutButtonPayPalInstallment").text() == "Ratenzahlung beantragen" ){
+				jQuery("#paypal-installment-specific-promotion_").css("display","block");
+				console.log("finanzierungsmöglichen anzeigen");
+			}else{
+				jQuery("#paypal-installment-specific-promotion_").css("display","none");
+				console.log("finanzierungsmöglichen verbergen");
+			}
+		},1000);
 	}
 
-	jQuery(".paymentMethodRow").click(function(){
+	checkFinanzierungsanzeige();
+
+	jQuery(".payment-method-select").click(function(){
 		checkFinanzierungsanzeige();
 	});
 
