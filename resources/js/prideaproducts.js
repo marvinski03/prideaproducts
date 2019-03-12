@@ -11,13 +11,13 @@ jQuery(document).ready(function() {
 				jQuery("#paypal-installment-specific-promotion_").css("display","none");
 				console.log("finanzierungsmöglichen verbergen");
 			}
-		},2500);
+		},500);
 	}
 
 	checkFinanzierungsanzeige();
 
-	jQuery(".payment-method-select").click(function(){
-		checkFinanzierungsanzeige();
+	$("body").on('DOMSubtreeModified', "#checkoutButtonPayPalInstallment", function() {
+	    checkFinanzierungsanzeige();
 	});
 
 });
