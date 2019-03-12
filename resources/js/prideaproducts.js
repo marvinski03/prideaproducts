@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
 				jQuery("#paypal-installment-specific-promotion_").css("display","none");
 				console.log("finanzierungsmöglichen verbergen");
 			}
-		},1000);
+		},2500);
 	}
 
 	checkFinanzierungsanzeige();
