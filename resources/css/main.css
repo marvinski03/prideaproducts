@@ -816,9 +816,15 @@ button#btnMainMenuToggler:before {
     line-height: 150%;
 }
 
-.checkout .paypal-installment-specific-promotion * {
+.checkout .paypal-installment-specific-promotion,
+.checkout .paypal-installment-specific-promotion *{
     font-size: 14px;
     line-height: 150%;
+    color: #7f878e !important;
+}
+
+.checkout .paypal-installment-specific-promotion a {
+    color: #268cc0 !important;
 }
 
 @media(max-width: 768px){
