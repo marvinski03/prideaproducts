@@ -968,7 +968,7 @@ span.availability.badge {
 
 div#plenty-cookie-bar,
 div#plenty-cookie-bar .container-max {
-    background: #f7f7f7;
+    background: #f7f7f7 !important;
 }
 
 .cookie-bar__btn {
