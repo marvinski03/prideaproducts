@@ -44,6 +44,10 @@ header.top-bar {
     background: none;
 }
 
+ul.pagination {
+    margin-bottom: 25px !important;
+}
+
 .top-bar{
   position: relative !important;
 }
