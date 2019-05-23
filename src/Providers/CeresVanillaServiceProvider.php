@@ -1,13 +1,11 @@
 <?php
 namespace CeresVanilla\Providers;
-use Ceres\Caching\NavigationCacheSettings;
-use Ceres\Caching\SideNavigationCacheSettings;
-use IO\Services\ContentCaching\Services\Container;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\Templates\Twig;
 use IO\Helper\TemplateContainer;
 use IO\Extensions\Functions\Partial;
+use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
 use Plenty\Plugin\ConfigRepository;
 use CeresVanilla\Extensions\PrideaGetFreitext;
 
@@ -30,8 +28,6 @@ class CeresVanillaServiceProvider extends ServiceProvider
         // Override partials
         $dispatcher->listen('IO.init.templates', function (Partial $partial) use ($enabledOverrides)
         {
-            pluginApp(Container::class)->register('CeresVanilla::PageDesign.Partials.Header.NavigationList.twig', NavigationCacheSettings::class);
-            pluginApp(Container::class)->register('CeresVanilla::PageDesign.Partials.Header.SideNavigation.twig', SideNavigationCacheSettings::class);
             $partial->set('head', 'Ceres::PageDesign.Partials.Head');
             $partial->set('header', 'Ceres::PageDesign.Partials.Header.Header');
             $partial->set('page-design', 'Ceres::PageDesign.PageDesign');
@@ -72,8 +68,8 @@ class CeresVanillaServiceProvider extends ServiceProvider
                 return false;
             }, self::PRIORITY);
         }
-        // Override template for item categories
-        if (in_array("category_item", $enabledOverrides) || in_array("all", $enabledOverrides))
+        // Override category view
+        if (in_array("category_view", $enabledOverrides) || in_array("all", $enabledOverrides))
         {
             $dispatcher->listen('IO.tpl.category.item', function (TemplateContainer $container)
             {
@@ -95,7 +91,7 @@ class CeresVanillaServiceProvider extends ServiceProvider
         {
             $dispatcher->listen('IO.tpl.checkout', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresVanilla::Checkout.Checkout');
+                $container->setTemplate('CeresVanilla::Checkout.CheckoutView');
                 return false;
             }, self::PRIORITY);
         }
@@ -131,12 +127,12 @@ class CeresVanillaServiceProvider extends ServiceProvider
         {
             $dispatcher->listen('IO.tpl.item', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresVanilla::Item.SingleItem');
+                $container->setTemplate('CeresVanilla::Item.SingleItemWrapper');
                 return false;
             }, self::PRIORITY);
         }
-        // Override category view
-        if (in_array("category_view", $enabledOverrides) || in_array("all", $enabledOverrides))
+        // Override search view
+        if (in_array("search", $enabledOverrides) || in_array("all", $enabledOverrides))
         {
             $dispatcher->listen('IO.tpl.search', function (TemplateContainer $container)
             {
@@ -149,7 +145,43 @@ class CeresVanillaServiceProvider extends ServiceProvider
         {
             $dispatcher->listen('IO.tpl.my-account', function (TemplateContainer $container)
             {
-                $container->setTemplate('CeresVanilla::MyAccount.MyAccount');
+                $container->setTemplate('CeresVanilla::MyAccount.MyAccountView');
+                return false;
+            }, self::PRIORITY);
+        }
+        // Override wish list
+        if (in_array("wish_list", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+            $dispatcher->listen('IO.tpl.wish-list', function (TemplateContainer $container)
+            {
+                $container->setTemplate('CeresVanilla::WishList.WishListView');
+                return false;
+            }, self::PRIORITY);
+        }
+        // Override contact page
+        if (in_array("contact", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+            $dispatcher->listen('IO.tpl.contact', function (TemplateContainer $container)
+            {
+                $container->setTemplate('CeresVanilla::Customer.Contact');
+                return false;
+            }, self::PRIORITY);
+        }
+        // Override order return view
+        if (in_array("order_return", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+            $dispatcher->listen('IO.tpl.order.return', function (TemplateContainer $container)
+            {
+                $container->setTemplate('CeresVanilla::OrderReturn.OrderReturnView');
+                return false;
+            }, self::PRIORITY);
+        }
+        // Override order return confirmation
+        if (in_array("order_return_confirmation", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+            $dispatcher->listen('IO.tpl.order.return.confirmation', function (TemplateContainer $container)
+            {
+                $container->setTemplate('CeresVanilla::OrderReturn.OrderReturnConfirmation');
                 return false;
             }, self::PRIORITY);
         }
@@ -159,6 +191,15 @@ class CeresVanillaServiceProvider extends ServiceProvider
             $dispatcher->listen('IO.tpl.cancellation-rights', function (TemplateContainer $container)
             {
                 $container->setTemplate('CeresVanilla::StaticPages.CancellationRights');
+                return false;
+            }, self::PRIORITY);
+        }
+        // Override cancellation form
+        if (in_array("cancellation_form", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+            $dispatcher->listen('IO.tpl.cancellation-form', function (TemplateContainer $container)
+            {
+                $container->setTemplate('CeresVanilla::StaticPages.CancellationForm');
                 return false;
             }, self::PRIORITY);
         }
@@ -205,6 +246,57 @@ class CeresVanillaServiceProvider extends ServiceProvider
             {
                 $container->setTemplate('CeresVanilla::StaticPages.PageNotFound');
                 return false;
+            }, self::PRIORITY);
+        }
+        // Override newsletter opt-out page
+        if (in_array("newsletter_opt_out", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+            $dispatcher->listen('IO.tpl.newsletter.opt-out', function (TemplateContainer $container)
+            {
+                $container->setTemplate('CeresVanilla::Newsletter.NewsletterOptOut');
+                return false;
+            }, self::PRIORITY);
+        }
+        $enabledResultFields = [];
+        if(!empty($config->get("CeresVanilla.result_fields.override")))
+        {
+            $enabledResultFields = explode(", ", $config->get("CeresVanilla.result_fields.override"));
+        }
+        if(!empty($enabledResultFields))
+        {
+            $dispatcher->listen( 'IO.ResultFields.*', function(ResultFieldTemplate $templateContainer) use ($enabledResultFields)
+            {
+                $templatesToOverride = [];
+                
+                // Override list item result fields
+                if (in_array("list_item", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_LIST_ITEM] = 'CeresVanilla::ResultFields.ListItem';
+                }
+                
+                // Override single item view result fields
+                if (in_array("single_item", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_SINGLE_ITEM] = 'CeresVanilla::ResultFields.SingleItem';
+                }
+                
+                // Override basket item result fields
+                if (in_array("basket_item", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_BASKET_ITEM] = 'CeresVanilla::ResultFields.BasketItem';
+                }
+                // Override auto complete list item result fields
+                if (in_array("auto_complete_list_item", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_AUTOCOMPLETE_ITEM_LIST] = 'CeresVanilla::ResultFields.AutoCompleteListItem';
+                }
+                
+                // Override category tree result fields
+                if (in_array("category_tree", $enabledResultFields) || in_array("all", $enabledResultFields))
+                {
+                    $templatesToOverride[ResultFieldTemplate::TEMPLATE_CATEGORY_TREE] = 'CeresVanilla::ResultFields.CategoryTree';
+                }
+                $templateContainer->setTemplates($templatesToOverride);
             }, self::PRIORITY);
         }
     }
