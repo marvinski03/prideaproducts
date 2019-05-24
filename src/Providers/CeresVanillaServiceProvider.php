@@ -11,6 +11,7 @@ use Plenty\Plugin\Templates\Twig;
 use IO\Helper\TemplateContainer;
 use IO\Helper\ComponentContainer;
 use IO\Extensions\Functions\Partial;
+use IO\Services\ItemSearch\Helper\ResultFieldTemplate;
 use Plenty\Plugin\ConfigRepository;
 use CeresVanilla\Extensions\PrideaGetFreitext;
 
@@ -177,6 +178,17 @@ class CeresVanillaServiceProvider extends ServiceProvider
                     return false;
                 }, self::PRIORITY);
             }
+
+            // Override search view
+        if (in_array("search", $enabledOverrides) || in_array("all", $enabledOverrides))
+        {
+
+            $dispatcher->listen('IO.tpl.search', function (TemplateContainer $container)
+            {
+                $container->setTemplate('Ceres::ItemList.ItemListView');
+                return false;
+            }, self::PRIORITY);
+        }
 
         // Override category view
         if (in_array("category_view", $enabledOverrides) || in_array("all", $enabledOverrides))

@@ -13,7 +13,7 @@
     <div class="categoriegrid page-content container-max">
             <div class="row mt-3">
                 <div class="col-12">
-                    <h1 class="h2 category-title try">
+                    <h1 class="h2 category-title try" id="searchPageTitle">
                         {% if category.details[0].shortDescription %}
                             {{ category.details[0].shortDescription | raw }}
                         {% else %}
@@ -109,7 +109,7 @@
 {% endblock %}
 
 {% block PartialHead %}
-    <script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","url": "{{ webstoreConfig.domainSsl }}","potentialAction":{"@type": "SearchAction","target": "{{ webstoreConfig.domainSsl ~ urls.search }}?query={search_term}","query-input": "required name=search_term"}}</script>
+   <script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","url": "{{ webstoreConfig.domainSsl }}","potentialAction":{"@type": "SearchAction","target": "{{ webstoreConfig.domainSsl ~ urls.search }}?query={search_term}","query-input": "required name=search_term"}}</script>
 
     {% set canonicalUrl = services.url.getCanonicalURL() %}
     {% if currentPage - 1 > 0 %}
