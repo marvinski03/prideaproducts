@@ -1,1 +1,103 @@
-<!-- Insert markup for order confirmation page here -->
+{% extends getPartial('page-design') %}
+{% import "Ceres::Checkout.Macros.Address" as address %}
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
+{% block PartialHead %}
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+    <title>{{ trans("Ceres::Template.orderConfirmation") }} | {{ trans("Ceres::Template.headerCompanyName") }}</title>
+
+    <!-- Google Code for Kauf Conversion Page -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 935104796;
+	var google_conversion_language = "en";
+	var google_conversion_format = "3";
+	var google_conversion_color = "ffffff";
+	var google_conversion_label = "LUWwCP2j52sQnKLyvQM";
+	var google_remarketing_only = false;
+	/* ]]> */
+	</script>
+
+
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	</script>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/935104796/?label=LUWwCP2j52sQnKLyvQM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '1567892190202280');
+	fbq('track', 'PageView');
+	fbq('track', 'Purchase', {value: $TotalAmount, currency:'EUR'});
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1567892190202280&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->
+{% endblock %}
+
+{% block PageBody %}
+
+    {{ component( "Ceres::MyAccount.Components.ChangePaymentMethod" ) }}
+
+    {% set overrideConfirmation = LayoutContainer.show("Ceres::OrderConfirmation.Override") %}
+    {% set addContentAfterOrderDetailsRow = LayoutContainer.show("Ceres::OrderConfirmation.AddContentAfterOrderDetailsRow") %}
+
+    {% if overrideConfirmation|trim is empty %}
+        <div class="page-content myaccount container-max mb-5 mt-3 pb-5">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h1 class="h2">{{ trans("Ceres::Template.orderConfirmationThanks") }}</h1>
+                    <p>{{ trans("Ceres::Template.orderConfirmationWillBeProcessed") }}</p>
+
+                    {{ LayoutContainer.show("Ceres::OrderConfirmation.AddContentAfterConfirmationThanks") }}
+
+                </div>
+            </div>
+
+            {{ LayoutContainer.show("Ceres::OrderConfirmation.BeforeOrderDetails", data.order) }}
+
+
+            {% include "Ceres::Checkout.OrderDetails" with { orderData: data } %}
+
+            <hr>
+            {% if addContentAfterOrderDetailsRow|trim is not empty %}
+            <div class="row">
+              {{ addContentAfterOrderDetailsRow }}
+            </div>
+            {% endif %}
+            <div class="row">
+                {% set loggedIn = frontend.Account.getIsAccountLoggedIn %}
+                <div class="col-6 col-md-4 {% if loggedIn %}offset-md-2{% else %}offset-3 offset-md-4{% endif %}">
+                    <a v-waiting-animation-infinite href="{{ homepageURL }}" type="" class="btn btn-primary btn-block bg-primary">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        {{ trans("Ceres::Template.orderConfirmationHomepage") }}
+                    </a>
+                </div>
+
+
+                {% if loggedIn %}
+                    <div class="col-6 col-md-4">
+                        <a v-waiting-animation-infinite href="{{ urls.myAccount }}" type="" class="btn btn-primary btn-block bg-primary">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            {{ trans("Ceres::Template.orderConfirmationMyAccount") }}
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+
+        </div>
+    {% else %}
+        {{ overrideConfirmation }}
+    {% endif %}
+
+{% endblock %}
