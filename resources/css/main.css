@@ -5,6 +5,13 @@ div#vue-app {
     min-height: 100vh !important;
 }
 
+.release-date {
+    margin: 15px 0px 15px 0px;
+    font-size: 16px;
+    background: #efefef;
+    padding: 7px 7px 5px 10px;
+}
+
 a.payment-confirmation-btn {
     background: #198ebd;
     font-size: 14px;

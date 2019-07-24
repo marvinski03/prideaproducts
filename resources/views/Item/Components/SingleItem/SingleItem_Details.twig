@@ -9,6 +9,13 @@
                             </span>
     </h1>
 
+    <div class="release-date" v-if="currentVariation.variation.releasedAt && new Date(currentVariation.variation.releasedAt) > Date.now()">
+        <strong>
+            <i aria-hidden="true" class="fa fa-calendar"></i> Erscheint am: ${ currentVariation.variation.releasedAt | date("DD.MM.YYYY") }
+        </strong>
+    </div>
+    
+
     {% if ('item.shortDescription' in itemData or 'all' in itemData)%}
         <p class="single-description" v-if="currentVariation.texts.shortDescription !== ''" v-html="currentVariation.texts.shortDescription"></p>
     {% endif %}
@@ -98,13 +105,7 @@
                         </span>
 
     <div class="row my-3">
-        <div class="w-100">
-            <div class="release-date" v-if="currentVariation.variation.releasedAt && new Date(currentVariation.variation.releasedAt) > Date.now()">
-                <strong>
-                    Erscheint am: ${ currentVariation.variation.releasedAt | date("DD.MM.YYYY") }
-                </strong>
-            </div>
-
+        <div class="w-100"> 
             <slot name="BeforeAddToBasket"></slot>
         </div>
 
