@@ -99,6 +99,12 @@
 
     <div class="row my-3">
         <div class="w-100">
+            <div class="release-date" v-if="currentVariation.variation.releasedAt && new Date(currentVariation.variation.releasedAt) > Date.now()">
+                <strong>
+                    Erscheint am: ${ currentVariation.variation.releasedAt | date("DD.MM.YYYY") }
+                </strong>
+            </div>
+
             <slot name="BeforeAddToBasket"></slot>
         </div>
 
