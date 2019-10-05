@@ -98,11 +98,11 @@
 
     <slot name="AfterPrice"></slot>
 
-    <span v-if="currentVariation.variation.availability" :class="'availability badge availability_' + currentVariation.variation.availability.id">
-                            <span>
-                                ${ currentVariation.variation.availability.names.name }
-                            </span>
-                        </span>
+    <span v-if="currentVariation.variation.availability && ! currentVariation.variation.releasedAt && new Date(currentVariation.variation.releasedAt) < Date.now()" :class="'availability badge availability_' + currentVariation.variation.availability.id">
+        <span>
+            ${ currentVariation.variation.availability.names.name }
+        </span>
+    </span>
 
     <div class="row my-3">
         <div class="w-100"> 
