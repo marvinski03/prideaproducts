@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
 	/** VORBESTELLEN **/
 
 	if ($(".release-date").length > 0){
-		$(".btn-primary").html('<i aria-hidden="true" class="fa fa-shopping-cart"></i> Jetzt vorbestellen');
+		$(".category-list-view-port .btn-primary").html('<i aria-hidden="true" class="fa fa-shopping-cart"></i> Jetzt vorbestellen');
 	}
 
 
