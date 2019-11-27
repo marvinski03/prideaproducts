@@ -1,5 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Sans:400,700');
 
+
+.cmp-product-thumb .crossprice,
+.single-rightside .crossprice del{
+    font-size: 14px;
+    font-weight: 700;
+    color: #7a7e7e;
+    text-decoration: none;
+    position: relative;
+}
+
+
+del.crossprice:before, .single-rightside .crossprice del:before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: red;
+    position: absolute;
+    top: 6px;
+    transform: rotate(-7deg);
+    opacity: 0.6;
+}
+
+.cmp-product-thumb .thumb-title {
+    font-size: 13px;
+}
+
+.cmp-product-thumb .price {
+    color: black;
+}
+
+
 div#vue-app {
     margin-top: 0px !important;
     min-height: 100vh !important;
