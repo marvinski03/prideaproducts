@@ -73,6 +73,17 @@
                     </div>
 
                     {{ LayoutContainer.show("Ceres::CategoryItem.SideNavBarBottom") }}
+
+
+                    {% if (category.id == '420') %}
+
+                        <div class="container">
+                            {{ category.details[0].description2 | raw }}
+                        </div>
+
+                    {% endif %}
+
+
                 </div>
 
             {% endif %}
@@ -101,9 +112,13 @@
             </div>
         {% endif %}
 
-         <div class="container">
-            {{ category.details[0].description2 | raw }}
+        {% if (category.id != '420') %}
+             <div class="container">
+                {{ category.details[0].description2 | raw }}
             </div>
+        {% endif %}
+
+
     </div>
 
 {% endblock %}
