@@ -264,6 +264,14 @@ body.scroll-stick .wrapper-main #page-body {
   .wrapper-main #page-body {
     margin-top: 0px;
 }
+
+.cyber-weekend{
+  display: none;
+}
+
+.intro-box img{
+  margin-bottom: 15px;
+}
 }
 
 .wrapper-main .navbar {
