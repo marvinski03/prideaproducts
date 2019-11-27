@@ -30,6 +30,25 @@ del.crossprice:before, .single-rightside .crossprice del:before {
     color: black;
 }
 
+.intro-box img,
+.yt-preview-box img{
+  width:100%;
+  height: auto;
+}
+
+.yt-preview-box{
+  margin-bottom:15px;
+}
+
+.yt-preview-img{
+  display:block;
+  cursor:pointer;
+}
+
+.yt-preview-vid{
+  display:none;
+}
+
 
 div#vue-app {
     margin-top: 0px !important;
