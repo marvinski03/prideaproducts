@@ -25,4 +25,11 @@ jQuery(document).ready(function() {
 	}
 
 
+	$(".yt-preview-img").click(function(e){
+		e.preventDefault();
+		$(this).css("display","none");
+		$(this).parent().children(".yt-preview-vid").css("display","block");
+	});
+
+
 });

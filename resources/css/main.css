@@ -26,10 +26,6 @@ del.crossprice:before, .single-rightside .crossprice del:before {
     font-size: 13px;
 }
 
-.cmp-product-thumb .price {
-    color: black;
-}
-
 .intro-box img,
 .yt-preview-box img{
   width:100%;
